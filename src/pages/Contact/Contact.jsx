@@ -64,6 +64,7 @@ function Contact() {
               fontSize: '1rem',
               outline: 'none',
               transition: 'border-color 0.3s',
+              boxSizing: 'border-box', // Fix for input overflow
             }}
           />
         </div>
@@ -94,6 +95,7 @@ function Contact() {
               fontSize: '1rem',
               outline: 'none',
               transition: 'border-color 0.3s',
+              boxSizing: 'border-box', // Fix for input overflow
             }}
           />
         </div>
@@ -124,6 +126,7 @@ function Contact() {
               fontSize: '1rem',
               outline: 'none',
               transition: 'border-color 0.3s',
+              boxSizing: 'border-box', // Fix for textarea overflow
             }}
           />
         </div>
