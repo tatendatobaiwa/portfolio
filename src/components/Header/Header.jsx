@@ -21,7 +21,7 @@ function Header() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        maxWidth: '900px', // Updated to match the home page
+        maxWidth: '1200px', // Updated to match the home page
         margin: '0 auto',
         padding: '0 20px', // Added padding to align with body and footer
       }}>
