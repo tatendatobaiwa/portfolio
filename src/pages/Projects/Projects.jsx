@@ -29,14 +29,13 @@ function Projects() {
       padding: '80px 20px',
       minHeight: '100vh',
     }}>
+      {/* Updated "Featured Projects" heading */}
       <h1 style={{
         fontSize: '48px',
         fontWeight: '700',
         marginBottom: '60px',
         textAlign: 'center',
-        background: 'linear-gradient(135deg, #9595e1, #434344)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
+        color: '#9595e1', // Plain light purple
         letterSpacing: '-0.5px'
       }}>
         Featured Projects
@@ -51,18 +50,26 @@ function Projects() {
         padding: '0 20px'
       }}>
         {projects.map((project, index) => (
-          <div key={index} style={{
-            background: '#202034',
-            borderRadius: '20px',
-            padding: '40px',
-            boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
-            backdropFilter: 'blur(20px)',
-            transition: 'transform 0.3s, box-shadow 0.3s',
-            ':hover': {
-              transform: 'translateY(-10px)',
-              boxShadow: '0 12px 40px rgba(0, 0, 0, 0.2)'
-            }
-          }}>
+          <div
+            key={index}
+            style={{
+              background: '#202034',
+              borderRadius: '20px',
+              padding: '40px',
+              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
+              backdropFilter: 'blur(20px)',
+              transition: 'transform 0.3s, box-shadow 0.3s',
+              cursor: 'pointer',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.2)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
+            }}
+          >
             <h2 style={{
               fontSize: '24px',
               fontWeight: '600',
@@ -113,10 +120,14 @@ function Projects() {
                 fontWeight: '500',
                 fontSize: '16px',
                 transition: 'all 0.3s',
-                ':hover': {
-                  background: '#67679f',
-                  transform: 'translateY(-2px)'
-                }
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = '#67679f';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = '#9595e1';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               View Project
