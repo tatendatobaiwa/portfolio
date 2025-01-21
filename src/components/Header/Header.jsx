@@ -9,7 +9,6 @@ function Header() {
 
   return (
     <header style={{
-      width: '100%',
       background: '#000000', // Plain black background
       padding: '10px 20px',
       boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
@@ -22,8 +21,9 @@ function Header() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        maxWidth: '1200px',
+        maxWidth: '900px', // Updated to match the home page
         margin: '0 auto',
+        padding: '0 20px', // Added padding to align with body and footer
       }}>
         {/* Logo */}
         <div style={{
@@ -45,8 +45,15 @@ function Header() {
               cursor: 'pointer',
               color: '#9595e1',
               fontSize: '1.5rem',
+              transition: 'color 0.3s',
             }}
             onClick={toggleMenu}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.color = '#9595e1'; // Revert to original color
+            }}
           >
             <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </div>
@@ -83,6 +90,12 @@ function Header() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = '#9595e1'; // Revert to original color
               }}>
                 <i className="fas fa-home"></i> Home
               </a>
@@ -98,6 +111,12 @@ function Header() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = '#9595e1'; // Revert to original color
               }}>
                 <i className="fas fa-user"></i> About
               </a>
@@ -113,6 +132,12 @@ function Header() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = '#9595e1'; // Revert to original color
               }}>
                 <i className="fas fa-code"></i> Projects
               </a>
@@ -128,6 +153,12 @@ function Header() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = '#9595e1'; // Revert to original color
               }}>
                 <i className="fas fa-envelope"></i> Contact
               </a>

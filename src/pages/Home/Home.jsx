@@ -3,7 +3,6 @@ import React from 'react';
 function Home() {
   return (
     <div style={{
-      width: '100%',
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #202034, #000000)',
       display: 'flex',

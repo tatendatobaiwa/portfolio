@@ -51,6 +51,12 @@ function Footer() {
             fontSize: '1rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             Home
           </a></li>
@@ -59,6 +65,12 @@ function Footer() {
             fontSize: '1rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             About
           </a></li>
@@ -67,6 +79,12 @@ function Footer() {
             fontSize: '1rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             Projects
           </a></li>
@@ -75,6 +93,12 @@ function Footer() {
             fontSize: '1rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             Contact
           </a></li>
@@ -92,6 +116,12 @@ function Footer() {
             fontSize: '1.2rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             <i className="fab fa-github"></i>
           </a></li>
@@ -99,6 +129,12 @@ function Footer() {
             fontSize: '1.2rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             <i className="fab fa-linkedin"></i>
           </a></li>
@@ -106,6 +142,12 @@ function Footer() {
             fontSize: '1.2rem',
             color: '#9595e1', // Light purple text
             transition: 'color 0.3s',
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.color = '#b3b3ff'; // Lighter purple on hover
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.color = '#9595e1'; // Revert to original color
           }}>
             <i className="fab fa-twitter"></i>
           </a></li>
