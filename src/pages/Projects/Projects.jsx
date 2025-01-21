@@ -1,5 +1,4 @@
 import React from 'react';
-import './Projects.css';
 
 const projects = [
   {
@@ -24,21 +23,102 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="projects">
-      <h1 className="projects-title">My Projects</h1>
-      <div className="projects-grid">
+    <div style={{
+      background: 'linear-gradient(135deg, #202034, #000000)',
+      color: '#1d1d1f',
+      padding: '80px 20px',
+      minHeight: '100vh',
+    }}>
+      <h1 style={{
+        fontSize: '48px',
+        fontWeight: '700',
+        marginBottom: '60px',
+        textAlign: 'center',
+        background: 'linear-gradient(135deg, #9595e1, #434344)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        letterSpacing: '-0.5px'
+      }}>
+        Featured Projects
+      </h1>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '30px',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 20px'
+      }}>
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <h2 className="project-title">{project.title}</h2>
-            <p className="project-description">{project.description}</p>
-            <div className="project-technologies">
+          <div key={index} style={{
+            background: '#202034',
+            borderRadius: '20px',
+            padding: '40px',
+            boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
+            backdropFilter: 'blur(20px)',
+            transition: 'transform 0.3s, box-shadow 0.3s',
+            ':hover': {
+              transform: 'translateY(-10px)',
+              boxShadow: '0 12px 40px rgba(0, 0, 0, 0.2)'
+            }
+          }}>
+            <h2 style={{
+              fontSize: '24px',
+              fontWeight: '600',
+              marginBottom: '16px',
+              color: '#9595e1'
+            }}>
+              {project.title}
+            </h2>
+
+            <p style={{
+              fontSize: '16px',
+              lineHeight: '1.6',
+              color: '#9595e1',
+              marginBottom: '24px'
+            }}>
+              {project.description}
+            </p>
+
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              marginBottom: '30px'
+            }}>
               {project.technologies.map((tech, idx) => (
-                <span className="technology" key={idx}>
+                <span key={idx} style={{
+                  background: '#f5f5f7',
+                  color: '#1d1d1f',
+                  padding: '6px 14px',
+                  borderRadius: '20px',
+                  fontSize: '14px',
+                  fontWeight: '500'
+                }}>
                   {tech}
                 </span>
               ))}
             </div>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+
+            <a
+              href={project.link}
+              style={{
+                display: 'inline-block',
+                background: '#9595e1',
+                color: '#202034',
+                padding: '12px 24px',
+                borderRadius: '25px',
+                textDecoration: 'none',
+                fontWeight: '500',
+                fontSize: '16px',
+                transition: 'all 0.3s',
+                ':hover': {
+                  background: '#67679f',
+                  transform: 'translateY(-2px)'
+                }
+              }}
+            >
               View Project
             </a>
           </div>
