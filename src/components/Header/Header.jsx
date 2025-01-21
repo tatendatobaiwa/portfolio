@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../../assets/tobaiwastudios.webp'; 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,14 +27,15 @@ function Header() {
         padding: '0 20px', // Added padding to align with body and footer
       }}>
         {/* Logo */}
-        <div style={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          background: 'linear-gradient(135deg, #9595e1, #67679f)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}>
-          MyPortfolio
+        <div>
+          <img
+            src={logo} // Use the imported logo
+            alt="Tobaiwa Studios Logo"
+            style={{
+              height: '60px', // Adjust height as needed
+              width: 'auto', // Maintain aspect ratio
+            }}
+          />
         </div>
 
         {/* Navigation */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/tobaiwastudios.webp'; 
 
 function Footer() {
   return (
@@ -20,22 +21,22 @@ function Footer() {
         gap: '15px',
       }}>
         {/* Logo */}
-        <div style={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          background: 'linear-gradient(135deg, #9595e1, #67679f)', // Gradient text
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}>
-          MyPortfolio
+        <div>
+          <img
+            src={logo} // Use the imported logo
+            alt="Tobaiwa Studios Logo"
+            style={{
+              height: '60px', // Adjust height as needed
+              width: 'auto', // Maintain aspect ratio
+            }}
+          />
         </div>
-
         {/* Footer Text */}
         <p style={{
           fontSize: '0.9rem',
           color: '#9595e1', // Light purple text
         }}>
-          © 2025 MyPortfolio. All Rights Reserved.
+          © 2025 tobaiwastudios. All Rights Reserved.
         </p>
 
         {/* Footer Links */}
