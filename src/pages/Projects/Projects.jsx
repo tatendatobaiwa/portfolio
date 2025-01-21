@@ -59,7 +59,7 @@ function Projects() {
               boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
               backdropFilter: 'blur(20px)',
               transition: 'transform 0.3s, box-shadow 0.3s',
-              cursor: 'pointer',
+              pointerEvents: 'none', // Disable pointer events for the card
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.transform = 'translateY(-10px)';
@@ -119,15 +119,14 @@ function Projects() {
                 textDecoration: 'none',
                 fontWeight: '500',
                 fontSize: '16px',
-                transition: 'all 0.3s',
+                transition: 'background 0.3s',
+                pointerEvents: 'auto', // Enable pointer events for the button
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.background = '#67679f';
-                e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.background = '#9595e1';
-                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               View Project

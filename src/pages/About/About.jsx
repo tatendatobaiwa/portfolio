@@ -46,7 +46,8 @@ function About() {
             margin: '0 auto',
             textAlign: 'center',
           }}>
-            Hello! I'm Tatenda, a passionate software engineer and designer with a knack for crafting elegant, intuitive, and efficient digital experiences. Whether it's designing a clean user interface or building a robust backend system, I thrive on solving challenging problems and bringing ideas to life.
+            Hey, I’m Tatenda.
+I’m into building software that just works and yeah, it looks good too. Whether it’s figuring out tricky problems or making designs feel natural, I’m all about that balance between doing and thinking. No fluff, just solutions that make sense and actually help people.
           </p>
         </section>
 
