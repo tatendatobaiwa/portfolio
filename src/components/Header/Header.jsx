@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,20 +8,130 @@ function Header() {
   };
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="logo">MyPortfolio</div>
+    <header style={{
+      width: '100%',
+      background: '#000000', // Plain black background
+      padding: '10px 20px',
+      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000,
+      borderBottom: '1px solid rgba(149, 149, 225, 0.1)',
+    }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        maxWidth: '1200px',
+        margin: '0 auto',
+      }}>
+        {/* Logo */}
+        <div style={{
+          fontSize: '1.5rem',
+          fontWeight: 'bold',
+          background: 'linear-gradient(135deg, #9595e1, #67679f)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}>
+          MyPortfolio
+        </div>
+
+        {/* Navigation */}
         <nav>
-          <div className="hamburger" onClick={toggleMenu}>
-            <div></div>
-            <div></div>
-            <div></div>
+          {/* Hamburger Menu (Font Awesome Icon) */}
+          <div
+            style={{
+              display: 'none',
+              cursor: 'pointer',
+              color: '#9595e1',
+              fontSize: '1.5rem',
+            }}
+            onClick={toggleMenu}
+          >
+            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </div>
-          <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
+
+          {/* Nav Links */}
+          <ul style={{
+            display: 'flex',
+            gap: '20px',
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            ...(isMenuOpen && {
+              flexDirection: 'column',
+              position: 'absolute',
+              top: '50px',
+              right: '20px',
+              width: '200px',
+              padding: '20px',
+              background: 'rgba(149, 149, 225, 0.05)',
+              borderRadius: '8px',
+              boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(149, 149, 225, 0.1)',
+            }),
+          }}>
+            <li>
+              <a href="/" style={{
+                textDecoration: 'none',
+                fontSize: '1rem',
+                color: '#9595e1',
+                padding: '5px 10px',
+                transition: 'color 0.3s, background-color 0.3s',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}>
+                <i className="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" style={{
+                textDecoration: 'none',
+                fontSize: '1rem',
+                color: '#9595e1',
+                padding: '5px 10px',
+                transition: 'color 0.3s, background-color 0.3s',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}>
+                <i className="fas fa-user"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="/projects" style={{
+                textDecoration: 'none',
+                fontSize: '1rem',
+                color: '#9595e1',
+                padding: '5px 10px',
+                transition: 'color 0.3s, background-color 0.3s',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}>
+                <i className="fas fa-code"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="/contact" style={{
+                textDecoration: 'none',
+                fontSize: '1rem',
+                color: '#9595e1',
+                padding: '5px 10px',
+                transition: 'color 0.3s, background-color 0.3s',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}>
+                <i className="fas fa-envelope"></i> Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
