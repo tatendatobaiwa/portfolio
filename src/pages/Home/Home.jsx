@@ -1,33 +1,20 @@
-import React, { useState } from 'react';
-import './Header.css';
+import React from 'react';
+import './Home.css';
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+function Home() {
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="logo">MyPortfolio</div>
-        <nav>
-          <div className="hamburger" onClick={toggleMenu}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div className="home">
+      <section className="hero">
+        <div className="hero-content">
+          <h1 className="hero-title">Welcome to MyPortfolio</h1>
+          <p className="hero-subtitle">
+            Crafting premium experiences through clean design and modern solutions.
+          </p>
+          <a href="/projects" className="cta-button">View My Work</a>
+        </div>
+      </section>
+    </div>
   );
 }
 
-export default Header;
+export default Home;

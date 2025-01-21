@@ -1,101 +1,85 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #fff;
-    background-color: #121212;
-  }
-  
-  /* Header Styles */
-  .header {
+/* Home Page Styles */
+.home {
     width: 100%;
-    background-color: #1c1c1e;
-    padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .header-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1c1c1e, #121212);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px;
   }
   
-  /* Logo Styles */
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .hero-content {
+    animation: fadeIn 1.2s ease-out;
+  }
+  
+  /* Title and Subtitle */
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
     color: #ffcc00;
   }
   
-  /* Navigation Styles */
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 30px;
+    line-height: 1.6;
   }
   
-  .nav-links li a {
-    text-decoration: none;
+  /* Call-to-Action Button */
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
     font-size: 1rem;
-    color: #fff;
-    padding: 5px 10px;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 5px;
-  }
-  
-  .nav-links li a:hover {
+    font-weight: 600;
     color: #1c1c1e;
     background-color: #ffcc00;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffdd33;
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
+    transform: translateY(-2px);
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      display: none;
-      background-color: #1c1c1e;
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      width: 200px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    .hero-title {
+      font-size: 2rem;
     }
   
-    .nav-links.show {
-      display: flex;
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
     }
   }
   
-  /* Hamburger Menu */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-  
-  .hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 3px;
-  }
-  
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
