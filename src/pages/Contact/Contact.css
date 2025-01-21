@@ -1,0 +1,117 @@
+/* Contact Page Styles */
+.contact {
+    background: linear-gradient(135deg, #1c1c1e, #121212);
+    color: #fff;
+    padding: 40px 20px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  .contact-description {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+  
+  /* Form Styles */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: #2c2c2e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffcc00;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: #1c1c1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ffcc00;
+  }
+  
+  .submit-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1c1c1e;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #ffdd33;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.6);
+  }
+  
+  /* Social Links */
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: #ffcc00;
+    font-weight: 600;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ffdd33;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2rem;
+    }
+  
+    .contact-description {
+      font-size: 1rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button {
+      font-size: 1rem;
+    }
+  }
+  
