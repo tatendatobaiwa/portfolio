@@ -1,0 +1,88 @@
+/* About Page Styles */
+.about {
+    background: linear-gradient(135deg, #1c1c1e, #121212);
+    color: #fff;
+    padding: 40px 20px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Section Styles */
+  .about-section,
+  .skills-section,
+  .fun-facts-section {
+    margin-bottom: 40px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: #bbb;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  /* Skills Section */
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .skills-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    color: #fff;
+    border-bottom: 1px solid #333;
+  }
+  
+  .skills-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Fun Facts Section */
+  .fun-facts {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #bbb;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .skills-list li {
+      font-size: 1rem;
+    }
+  
+    .fun-facts {
+      font-size: 0.9rem;
+    }
+  }
+  
