@@ -26,7 +26,7 @@ function Home() {
             letterSpacing: '-0.5px',
             lineHeight: '1.2',
           }}>
-            Welcome to MyPortfolio
+            Welcome to tobaiwastudios
           </h1>
           
           <p style={{
